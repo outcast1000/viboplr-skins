@@ -1,0 +1,21 @@
+{
+  "name": "Catppuccin Latte",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "light",
+  "colors": {
+    "bg-primary": "#eff1f5",
+    "bg-secondary": "#e6e9ef",
+    "bg-surface": "#ccd0da",
+    "bg-hover": "#bcc0cc",
+    "text-primary": "#4c4f69",
+    "text-secondary": "#6c6f85",
+    "accent": "#8839ef",
+    "accent-dim": "#7029d6",
+    "border": "#ccd0da",
+    "now-playing-bg": "#e6e9ef",
+    "success": "#40a02b",
+    "error": "#d20f39",
+    "warning": "#df8e1d"
+  }
+}

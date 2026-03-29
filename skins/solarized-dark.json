@@ -1,0 +1,21 @@
+{
+  "name": "Solarized Dark",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#002b36",
+    "bg-secondary": "#073642",
+    "bg-surface": "#0a4050",
+    "bg-hover": "#0d4f5e",
+    "text-primary": "#fdf6e3",
+    "text-secondary": "#93a1a1",
+    "accent": "#268bd2",
+    "accent-dim": "#2176b0",
+    "border": "#0a4050",
+    "now-playing-bg": "#001f28",
+    "success": "#859900",
+    "error": "#dc322f",
+    "warning": "#b58900"
+  }
+}

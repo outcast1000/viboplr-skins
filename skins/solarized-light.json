@@ -1,0 +1,21 @@
+{
+  "name": "Solarized Light",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "light",
+  "colors": {
+    "bg-primary": "#fdf6e3",
+    "bg-secondary": "#eee8d5",
+    "bg-surface": "#ddd6c1",
+    "bg-hover": "#d6cfb8",
+    "text-primary": "#073642",
+    "text-secondary": "#586e75",
+    "accent": "#268bd2",
+    "accent-dim": "#2176b0",
+    "border": "#ddd6c1",
+    "now-playing-bg": "#f5eeda",
+    "success": "#859900",
+    "error": "#dc322f",
+    "warning": "#b58900"
+  }
+}

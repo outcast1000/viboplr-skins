@@ -1,0 +1,21 @@
+{
+  "name": "Dracula",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#282a36",
+    "bg-secondary": "#21222c",
+    "bg-surface": "#44475a",
+    "bg-hover": "#4d5066",
+    "text-primary": "#f8f8f2",
+    "text-secondary": "#6272a4",
+    "accent": "#bd93f9",
+    "accent-dim": "#9b6dff",
+    "border": "#44475a",
+    "now-playing-bg": "#1e1f29",
+    "success": "#50fa7b",
+    "error": "#ff5555",
+    "warning": "#f1fa8c"
+  }
+}

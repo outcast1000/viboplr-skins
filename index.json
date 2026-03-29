@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "skins": [
+    {
+      "id": "nord",
+      "name": "Nord",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/nord.json",
+      "colors": ["#2e3440", "#3b4252", "#88c0d0", "#434c5e"]
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/dracula.json",
+      "colors": ["#282a36", "#21222c", "#bd93f9", "#44475a"]
+    },
+    {
+      "id": "solarized-dark",
+      "name": "Solarized Dark",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/solarized-dark.json",
+      "colors": ["#002b36", "#073642", "#268bd2", "#0a4050"]
+    },
+    {
+      "id": "solarized-light",
+      "name": "Solarized Light",
+      "author": "Viboplr Community",
+      "type": "light",
+      "version": "1.0.0",
+      "file": "skins/solarized-light.json",
+      "colors": ["#fdf6e3", "#eee8d5", "#268bd2", "#ddd6c1"]
+    },
+    {
+      "id": "monokai",
+      "name": "Monokai",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/monokai.json",
+      "colors": ["#272822", "#1e1f1a", "#a6e22e", "#3e3d32"]
+    },
+    {
+      "id": "catppuccin-mocha",
+      "name": "Catppuccin Mocha",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/catppuccin-mocha.json",
+      "colors": ["#1e1e2e", "#181825", "#cba6f7", "#313244"]
+    },
+    {
+      "id": "catppuccin-latte",
+      "name": "Catppuccin Latte",
+      "author": "Viboplr Community",
+      "type": "light",
+      "version": "1.0.0",
+      "file": "skins/catppuccin-latte.json",
+      "colors": ["#eff1f5", "#e6e9ef", "#8839ef", "#ccd0da"]
+    },
+    {
+      "id": "tokyo-night",
+      "name": "Tokyo Night",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/tokyo-night.json",
+      "colors": ["#1a1b26", "#16161e", "#7aa2f7", "#292e42"]
+    },
+    {
+      "id": "gruvbox",
+      "name": "Gruvbox",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/gruvbox.json",
+      "colors": ["#282828", "#1d2021", "#fabd2f", "#3c3836"]
+    },
+    {
+      "id": "rose-pine",
+      "name": "Rose Pine",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/rose-pine.json",
+      "colors": ["#191724", "#1f1d2e", "#ebbcba", "#26233a"]
+    }
+  ]
+}

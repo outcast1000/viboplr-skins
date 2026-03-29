@@ -1,0 +1,21 @@
+{
+  "name": "Rose Pine",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#191724",
+    "bg-secondary": "#1f1d2e",
+    "bg-surface": "#26233a",
+    "bg-hover": "#2e2b42",
+    "text-primary": "#e0def4",
+    "text-secondary": "#908caa",
+    "accent": "#ebbcba",
+    "accent-dim": "#c4a0a0",
+    "border": "#26233a",
+    "now-playing-bg": "#13111e",
+    "success": "#9ccfd8",
+    "error": "#eb6f92",
+    "warning": "#f6c177"
+  }
+}
