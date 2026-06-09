@@ -1,0 +1,57 @@
+name: Submit a skin
+description: Add your skin (theme) to the Viboplr gallery.
+title: "[Skin] <your skin name>"
+labels: ["skin-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing a skin! 🎨
+
+        Unlike plugins, skin files are **hosted in this repo**. Paste your skin's
+        JSON below (or link to it) and a bot validates all 15 colors + your
+        `customCSS`, then opens a PR that adds the file and the gallery entry for
+        a maintainer to merge.
+
+        You can export a skin from the Viboplr app (Settings → Skins → Export),
+        or hand-write one. It needs `name`, `author`, `type` (`dark`/`light`),
+        and a `colors` object with all 15 keys. See the
+        [submission guide](https://github.com/outcast1000/viboplr-skins#submitting-a-skin).
+  - type: textarea
+    id: skin-json
+    attributes:
+      label: Skin JSON
+      description: Paste the full skin JSON here. Fenced code blocks are fine.
+      render: json
+      placeholder: |
+        {
+          "name": "My Skin",
+          "author": "Your Name",
+          "type": "dark",
+          "version": "1.0.0",
+          "colors": {
+            "bg-primary": "#1e1e2e",
+            "...": "all 15 keys"
+          }
+        }
+    validations:
+      required: false
+  - type: input
+    id: skin-json-url
+    attributes:
+      label: Skin JSON URL
+      description: Alternatively, link to a raw skin JSON file (https). Used only if the field above is empty.
+      placeholder: https://raw.githubusercontent.com/you/your-skin/main/skin.json
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: My skin includes all 15 color keys as valid hex values.
+          required: true
+        - label: I authored this skin (or have the right to submit it).
+          required: true
+        - label: My customCSS (if any) contains no `@import`, `url(...)`, `javascript:`, or `expression(...)`.
+          required: true

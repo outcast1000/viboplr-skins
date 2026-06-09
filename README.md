@@ -17,12 +17,20 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
 | Gruvbox | Dark | `#282828` `#fabd2f` |
 | Rose Pine | Dark | `#191724` `#ebbcba` |
 
-## Contributing a Skin
+## Submitting a skin
 
-1. Fork this repo
-2. Create your skin JSON file in `skins/`
-3. Add an entry to `index.json`
-4. Open a pull request
+You don't edit `index.json` by hand. Instead:
+
+1. **Get your skin JSON.** Export from the app (Settings → Skins → Export) or
+   hand-write one in the format below. It needs `name`, `author`, `type`, and a
+   `colors` object with **all 15 keys**.
+2. **Open a [Submit a skin](../../issues/new?template=submit-skin.yml) issue**
+   and paste the JSON (or link to a raw `.json` URL).
+3. A bot **validates** it — all 15 hex colors, `type`, and `customCSS` hygiene —
+   and either comments what's wrong or opens a PR that writes
+   `skins/<id>.json` and adds the index entry. Comment `/retry` after fixing.
+4. A maintainer reviews and **merges the PR** — that publishes your skin to the
+   gallery and to [viboplr.com/skins](https://viboplr.com/skins.html).
 
 ### Skin JSON Format
 
@@ -35,10 +43,12 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
   "colors": {
     "bg-primary": "#1a1a2e",
     "bg-secondary": "#16213e",
+    "bg-tertiary": "#1d2748",
     "bg-surface": "#0f3460",
     "bg-hover": "#1a3a6e",
     "text-primary": "#e0e0e0",
     "text-secondary": "#a0a0b0",
+    "text-tertiary": "#70708a",
     "accent": "#53a8ff",
     "accent-dim": "#3a7bd5",
     "border": "#2a2a4a",
@@ -57,10 +67,10 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
 |-------|----------|-------------|
 | `name` | Yes | Display name |
 | `author` | Yes | Your name or username |
-| `version` | Yes | Semver version string |
+| `version` | No | Version string (defaults to `1.0.0`). Use numeric (`1.2.0`) so auto-update works. |
 | `type` | Yes | `"dark"` or `"light"` — controls overlay contrast behavior |
-| `colors` | Yes | All 13 color tokens (see below) |
-| `customCSS` | No | Optional raw CSS overrides (max 10KB) |
+| `colors` | Yes | All 15 color tokens (see below) |
+| `customCSS` | No | Optional raw CSS overrides (max 10KB; no `@import`, `url(...)`, `javascript:`, or `expression(...)`) |
 
 ### Color Tokens
 
@@ -68,10 +78,12 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
 |-------|-------------|
 | `bg-primary` | Main app background |
 | `bg-secondary` | Sidebar, secondary panels |
+| `bg-tertiary` | Tertiary surfaces |
 | `bg-surface` | Active/focused elements |
 | `bg-hover` | Hover state backgrounds |
 | `text-primary` | Main text color |
 | `text-secondary` | Labels, secondary text |
+| `text-tertiary` | Faint/tertiary text |
 | `accent` | Primary accent (buttons, links, highlights) |
 | `accent-dim` | Dimmed accent variant |
 | `border` | Borders and dividers |
@@ -82,9 +94,9 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
 
 All color values must be hex format (`#rgb` or `#rrggbb`).
 
-### Index Entry Format
+### Index Entry Format (generated for you)
 
-Add your skin to `index.json`:
+The bot derives this entry automatically:
 
 ```json
 {
@@ -94,11 +106,23 @@ Add your skin to `index.json`:
   "type": "dark",
   "version": "1.0.0",
   "file": "skins/my-skin.json",
-  "colors": ["#1a1a2e", "#16213e", "#53a8ff", "#0f3460"]
+  "colors": ["#1a1a2e", "#16213e", "#53a8ff", "#0f3460"],
+  "recommended": false
 }
 ```
 
-The `colors` array has 4 preview swatches: bg-primary, bg-secondary, accent, bg-surface.
+The `colors` array has 4 preview swatches in this order: `bg-primary`,
+`bg-secondary`, `accent`, `bg-surface`. `recommended` is **curator-controlled** —
+maintainers flip it in the PR to feature a skin (the app shows a "Recommended"
+badge); it is preserved across re-submissions.
+
+## Maintainer tooling
+
+- `scripts/validate-skin.mjs` — validates one skin's JSON.
+- `scripts/process-submission.mjs` — run by the submission workflow.
+- `scripts/validate-index.mjs` — PR gate; checks `index.json` and that every
+  `skins/*.json` file exists, validates, and matches its swatches.
+- `node scripts/skin.test.mjs` — unit tests. All zero-dependency Node 20+.
 
 ## Local Import
 

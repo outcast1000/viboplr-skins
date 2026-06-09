@@ -1,0 +1,26 @@
+name: Validate index
+
+on:
+  pull_request:
+    paths:
+      - "index.json"
+      - "skins/**"
+      - "scripts/**"
+  push:
+    branches: [main]
+    paths:
+      - "index.json"
+      - "skins/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Validate index.json + skin files
+        run: node scripts/validate-index.mjs
+      - name: Run unit tests
+        run: node scripts/skin.test.mjs
