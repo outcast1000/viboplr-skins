@@ -90,6 +90,78 @@
       "version": "1.1.0",
       "file": "skins/rose-pine.json",
       "colors": ["#191724", "#1f1d2e", "#ebbcba", "#26233a"]
+    },
+    {
+      "id": "one-dark",
+      "name": "One Dark",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/one-dark.json",
+      "colors": ["#282c34", "#21252b", "#61afef", "#3e4451"]
+    },
+    {
+      "id": "github-dark",
+      "name": "GitHub Dark",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/github-dark.json",
+      "colors": ["#0d1117", "#161b22", "#58a6ff", "#30363d"]
+    },
+    {
+      "id": "github-light",
+      "name": "GitHub Light",
+      "author": "Viboplr Community",
+      "type": "light",
+      "version": "1.0.0",
+      "file": "skins/github-light.json",
+      "colors": ["#ffffff", "#f6f8fa", "#0969da", "#d0d7de"]
+    },
+    {
+      "id": "everforest",
+      "name": "Everforest",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/everforest.json",
+      "colors": ["#2d353b", "#232a2e", "#a7c080", "#3d484d"]
+    },
+    {
+      "id": "kanagawa",
+      "name": "Kanagawa",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/kanagawa.json",
+      "colors": ["#1f1f28", "#16161d", "#7e9cd8", "#2d4f67"]
+    },
+    {
+      "id": "gruvbox-light",
+      "name": "Gruvbox Light",
+      "author": "Viboplr Community",
+      "type": "light",
+      "version": "1.0.0",
+      "file": "skins/gruvbox-light.json",
+      "colors": ["#fbf1c7", "#f9f5d7", "#d79921", "#ebdbb2"]
+    },
+    {
+      "id": "catppuccin-frappe",
+      "name": "Catppuccin Frappé",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/catppuccin-frappe.json",
+      "colors": ["#303446", "#292c3c", "#ca9ee6", "#414559"]
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "name": "Catppuccin Macchiato",
+      "author": "Viboplr Community",
+      "type": "dark",
+      "version": "1.0.0",
+      "file": "skins/catppuccin-macchiato.json",
+      "colors": ["#24273a", "#1e2030", "#c6a0f6", "#363a4f"]
     }
   ]
 }

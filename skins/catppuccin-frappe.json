@@ -1,0 +1,26 @@
+{
+  "name": "Catppuccin Frappé",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#303446",
+    "bg-secondary": "#292c3c",
+    "bg-tertiary": "#363a4d",
+    "bg-surface": "#414559",
+    "bg-hover": "#494e63",
+    "text-primary": "#c6d0f5",
+    "text-secondary": "#a5adce",
+    "text-tertiary": "#838ba7",
+    "accent": "#ca9ee6",
+    "accent-dim": "#b38ccc",
+    "accent-text": "#303446",
+    "border": "#414559",
+    "now-playing-bg": "#232634",
+    "success": "#a6d189",
+    "error": "#e78284",
+    "warning": "#e5c890",
+    "like": "#e78284",
+    "dislike": "#ef9f76"
+  }
+}

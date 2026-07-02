@@ -16,6 +16,14 @@ Community color skins for [Viboplr](https://github.com/outcast1000/viboplr). Bro
 | Tokyo Night | Dark | `#1a1b26` `#7aa2f7` |
 | Gruvbox | Dark | `#282828` `#fabd2f` |
 | Rose Pine | Dark | `#191724` `#ebbcba` |
+| One Dark | Dark | `#282c34` `#61afef` |
+| GitHub Dark | Dark | `#0d1117` `#58a6ff` |
+| GitHub Light | Light | `#ffffff` `#0969da` |
+| Everforest | Dark | `#2d353b` `#a7c080` |
+| Kanagawa | Dark | `#1f1f28` `#7e9cd8` |
+| Catppuccin Frappé | Dark | `#303446` `#ca9ee6` |
+| Catppuccin Macchiato | Dark | `#24273a` `#c6a0f6` |
+| Gruvbox Light | Light | `#fbf1c7` `#d79921` |
 
 ## Submitting a skin
 

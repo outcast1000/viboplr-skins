@@ -1,0 +1,26 @@
+{
+  "name": "Kanagawa",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#1f1f28",
+    "bg-secondary": "#16161d",
+    "bg-tertiary": "#2a2a37",
+    "bg-surface": "#2d4f67",
+    "bg-hover": "#363646",
+    "text-primary": "#dcd7ba",
+    "text-secondary": "#c8c093",
+    "text-tertiary": "#727169",
+    "accent": "#7e9cd8",
+    "accent-dim": "#658594",
+    "accent-text": "#1f1f28",
+    "border": "#54546d",
+    "now-playing-bg": "#16161d",
+    "success": "#98bb6c",
+    "error": "#ff5d62",
+    "warning": "#ff9e3b",
+    "like": "#d27e99",
+    "dislike": "#ffa066"
+  }
+}

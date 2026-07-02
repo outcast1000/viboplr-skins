@@ -1,0 +1,26 @@
+{
+  "name": "One Dark",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#282c34",
+    "bg-secondary": "#21252b",
+    "bg-tertiary": "#2c313c",
+    "bg-surface": "#3e4451",
+    "bg-hover": "#353b45",
+    "text-primary": "#abb2bf",
+    "text-secondary": "#828997",
+    "text-tertiary": "#5c6370",
+    "accent": "#61afef",
+    "accent-dim": "#4e8cbf",
+    "accent-text": "#282c34",
+    "border": "#181a1f",
+    "now-playing-bg": "#21252b",
+    "success": "#98c379",
+    "error": "#e06c75",
+    "warning": "#e5c07b",
+    "like": "#e06c75",
+    "dislike": "#d19a66"
+  }
+}

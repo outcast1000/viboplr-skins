@@ -1,0 +1,26 @@
+{
+  "name": "GitHub Dark",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#0d1117",
+    "bg-secondary": "#161b22",
+    "bg-tertiary": "#21262d",
+    "bg-surface": "#30363d",
+    "bg-hover": "#262c36",
+    "text-primary": "#e6edf3",
+    "text-secondary": "#8b949e",
+    "text-tertiary": "#6e7681",
+    "accent": "#58a6ff",
+    "accent-dim": "#1f6feb",
+    "accent-text": "#0d1117",
+    "border": "#30363d",
+    "now-playing-bg": "#010409",
+    "success": "#3fb950",
+    "error": "#f85149",
+    "warning": "#d29922",
+    "like": "#f85149",
+    "dislike": "#db6d28"
+  }
+}

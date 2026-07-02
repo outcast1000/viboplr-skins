@@ -1,0 +1,26 @@
+{
+  "name": "Everforest",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "dark",
+  "colors": {
+    "bg-primary": "#2d353b",
+    "bg-secondary": "#232a2e",
+    "bg-tertiary": "#343f44",
+    "bg-surface": "#3d484d",
+    "bg-hover": "#475258",
+    "text-primary": "#d3c6aa",
+    "text-secondary": "#9da9a0",
+    "text-tertiary": "#7a8478",
+    "accent": "#a7c080",
+    "accent-dim": "#8ea36d",
+    "accent-text": "#2d353b",
+    "border": "#4f585e",
+    "now-playing-bg": "#232a2e",
+    "success": "#a7c080",
+    "error": "#e67e80",
+    "warning": "#dbbc7f",
+    "like": "#e67e80",
+    "dislike": "#e69875"
+  }
+}

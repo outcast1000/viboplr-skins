@@ -1,0 +1,26 @@
+{
+  "name": "Gruvbox Light",
+  "author": "Viboplr Community",
+  "version": "1.0.0",
+  "type": "light",
+  "colors": {
+    "bg-primary": "#fbf1c7",
+    "bg-secondary": "#f9f5d7",
+    "bg-tertiary": "#f2e5bc",
+    "bg-surface": "#ebdbb2",
+    "bg-hover": "#d5c4a1",
+    "text-primary": "#3c3836",
+    "text-secondary": "#665c54",
+    "text-tertiary": "#928374",
+    "accent": "#d79921",
+    "accent-dim": "#b57614",
+    "accent-text": "#282828",
+    "border": "#d5c4a1",
+    "now-playing-bg": "#f2e5bc",
+    "success": "#79740e",
+    "error": "#9d0006",
+    "warning": "#af3a03",
+    "like": "#9d0006",
+    "dislike": "#af3a03"
+  }
+}
