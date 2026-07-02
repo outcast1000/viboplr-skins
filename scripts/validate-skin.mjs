@@ -1,7 +1,8 @@
 // Validate a skin submission and derive both the file content and the index
 // entry. Mirrors the app's validation (src/skinUtils.ts validateSkin +
-// sanitizeCustomCSS): 15 required hex colors, type dark|light, and a
-// customCSS that is size-capped and free of dangerous constructs.
+// sanitizeCustomCSS): 18 hex color keys (15 required + 3 optional),
+// type dark|light, and a customCSS that is size-capped and free of
+// dangerous constructs.
 //
 // Input is the raw skin JSON text (pasted or fetched). Returns
 // { ok, errors[], warnings[], skin, entry, id } where:
@@ -11,6 +12,7 @@
 
 import {
   SKIN_COLOR_KEYS,
+  OPTIONAL_SKIN_COLOR_KEYS,
   SWATCH_KEYS,
   isHexColor,
   isVersionString,
@@ -64,14 +66,19 @@ export function validateSkinText(raw, { fallbackId } = {}) {
     errors.push('"updateUrl" must be an https URL if present.');
   }
 
-  // --- colors: all 15, all hex, no extras ---
+  // --- colors: 15 required + 3 optional, all hex, no extras ---
   const colors = skin.colors;
   if (!colors || typeof colors !== "object" || Array.isArray(colors)) {
-    errors.push('"colors" must be an object with all 15 color keys.');
+    errors.push('"colors" must be an object with the 15 required color keys.');
   } else {
     for (const key of SKIN_COLOR_KEYS) {
-      if (!(key in colors)) errors.push(`colors is missing "${key}".`);
-      else if (!isHexColor(colors[key])) errors.push(`colors["${key}"] must be a hex color (got: ${colors[key]}).`);
+      if (!(key in colors)) {
+        if (OPTIONAL_SKIN_COLOR_KEYS.includes(key)) {
+          warnings.push(`colors is missing optional "${key}" — the app falls back to its default skin's value.`);
+        } else {
+          errors.push(`colors is missing "${key}".`);
+        }
+      } else if (!isHexColor(colors[key])) errors.push(`colors["${key}"] must be a hex color (got: ${colors[key]}).`);
     }
     const extras = Object.keys(colors).filter((k) => !SKIN_COLOR_KEYS.includes(k));
     if (extras.length) warnings.push(`Unknown color keys ignored: ${extras.join(", ")}.`);
@@ -112,7 +119,7 @@ export function validateSkinText(raw, { fallbackId } = {}) {
     author: String(skin.author).trim(),
     version,
     type: skin.type,
-    colors: Object.fromEntries(SKIN_COLOR_KEYS.map((k) => [k, colors[k]])),
+    colors: Object.fromEntries(SKIN_COLOR_KEYS.filter((k) => k in colors).map((k) => [k, colors[k]])),
   };
   if (cleanCss) cleanSkin.customCSS = cleanCss;
   if (skin.updateUrl) cleanSkin.updateUrl = String(skin.updateUrl);

@@ -1,7 +1,7 @@
 {
   "name": "Monokai",
   "author": "Viboplr Community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "dark",
   "colors": {
     "bg-primary": "#272822",
@@ -14,10 +14,13 @@
     "text-tertiary": "#585546",
     "accent": "#a6e22e",
     "accent-dim": "#8cc41e",
+    "accent-text": "#272822",
     "border": "#3e3d32",
     "now-playing-bg": "#1c1d17",
     "success": "#a6e22e",
     "error": "#f92672",
-    "warning": "#e6db74"
+    "warning": "#e6db74",
+    "like": "#f92672",
+    "dislike": "#fd971f"
   }
 }

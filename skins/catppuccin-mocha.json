@@ -1,7 +1,7 @@
 {
   "name": "Catppuccin Mocha",
   "author": "Viboplr Community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "dark",
   "colors": {
     "bg-primary": "#1e1e2e",
@@ -14,10 +14,13 @@
     "text-tertiary": "#7c8298",
     "accent": "#cba6f7",
     "accent-dim": "#b490e0",
+    "accent-text": "#1e1e2e",
     "border": "#313244",
     "now-playing-bg": "#11111b",
     "success": "#a6e3a1",
     "error": "#f38ba8",
-    "warning": "#f9e2af"
+    "warning": "#f9e2af",
+    "like": "#f38ba8",
+    "dislike": "#fab387"
   }
 }

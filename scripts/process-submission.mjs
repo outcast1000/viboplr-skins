@@ -122,7 +122,7 @@ const prBody =
   `Automated submission from #${issueNumber} by @${issueUser}.\n\n` +
   `**${verb}:** \`${id}\` — ${entry.name} by ${entry.author} (${entry.type})\n\n` +
   `Swatches: ${swatches}\n\n` +
-  `Writes \`${filePath}\` and adds the index entry. Validated against the app's 15-key ` +
+  `Writes \`${filePath}\` and adds the index entry. Validated against the app's 18-key ` +
   `color schema and customCSS rules.${warnBlock}\n\n` +
   `Merging publishes it. To feature it, add \`"recommended": true\` to the index entry before merge.\n\n` +
   `Closes #${issueNumber}`;

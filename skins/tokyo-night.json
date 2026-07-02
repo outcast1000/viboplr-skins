@@ -1,7 +1,7 @@
 {
   "name": "Tokyo Night",
   "author": "Viboplr Community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "dark",
   "colors": {
     "bg-primary": "#1a1b26",
@@ -14,10 +14,13 @@
     "text-tertiary": "#414868",
     "accent": "#7aa2f7",
     "accent-dim": "#5d87e0",
+    "accent-text": "#1a1b26",
     "border": "#292e42",
     "now-playing-bg": "#13131d",
     "success": "#9ece6a",
     "error": "#f7768e",
-    "warning": "#e0af68"
+    "warning": "#e0af68",
+    "like": "#f7768e",
+    "dislike": "#ff9e64"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Nord",
   "author": "Viboplr Community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "dark",
   "colors": {
     "bg-primary": "#2e3440",
@@ -14,10 +14,13 @@
     "text-tertiary": "#7b8394",
     "accent": "#88c0d0",
     "accent-dim": "#5e81ac",
+    "accent-text": "#2e3440",
     "border": "#4c566a",
     "now-playing-bg": "#272c36",
     "success": "#a3be8c",
     "error": "#bf616a",
-    "warning": "#ebcb8b"
+    "warning": "#ebcb8b",
+    "like": "#bf616a",
+    "dislike": "#d08770"
   }
 }

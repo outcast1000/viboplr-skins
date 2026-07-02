@@ -1,7 +1,7 @@
 // Shared helpers for the Viboplr skin gallery automation.
 // Zero npm dependencies — Node 20+ built-ins only.
 
-/** The 15 required skin color keys, mirrored from the app's
+/** All 18 skin color keys, mirrored from the app's
  *  src/types/skin.ts SKIN_COLOR_KEYS. Order matters for documentation but the
  *  validator checks presence, not order. */
 export const SKIN_COLOR_KEYS = [
@@ -15,12 +15,21 @@ export const SKIN_COLOR_KEYS = [
   "text-tertiary",
   "accent",
   "accent-dim",
+  "accent-text",
   "border",
   "now-playing-bg",
   "success",
   "error",
   "warning",
+  "like",
+  "dislike",
 ];
+
+/** Keys added after the original 15-key schema (mirrors the app's
+ *  OPTIONAL_SKIN_COLOR_KEYS). Skins published before the addition may lack
+ *  them — the app falls back to its default skin's values — so the validator
+ *  treats them as optional: validated when present, warned when absent. */
+export const OPTIONAL_SKIN_COLOR_KEYS = ["accent-text", "like", "dislike"];
 
 /** The 4 colors shown as swatches in the gallery index tuple, in order:
  *  [bg-primary, bg-secondary, accent, bg-surface] — matches the live index.json. */

@@ -9,13 +9,13 @@ body:
         Thanks for contributing a skin! 🎨
 
         Unlike plugins, skin files are **hosted in this repo**. Paste your skin's
-        JSON below (or link to it) and a bot validates all 15 colors + your
+        JSON below (or link to it) and a bot validates the colors + your
         `customCSS`, then opens a PR that adds the file and the gallery entry for
         a maintainer to merge.
 
         You can export a skin from the Viboplr app (Settings → Skins → Export),
         or hand-write one. It needs `name`, `author`, `type` (`dark`/`light`),
-        and a `colors` object with all 15 keys. See the
+        and a `colors` object with all 18 keys (3 optional). See the
         [submission guide](https://github.com/outcast1000/viboplr-skins#submitting-a-skin).
   - type: textarea
     id: skin-json
@@ -31,7 +31,7 @@ body:
           "version": "1.0.0",
           "colors": {
             "bg-primary": "#1e1e2e",
-            "...": "all 15 keys"
+            "...": "all 18 keys"
           }
         }
     validations:
@@ -49,7 +49,7 @@ body:
     attributes:
       label: Confirmations
       options:
-        - label: My skin includes all 15 color keys as valid hex values.
+        - label: My skin includes the 18 color keys as valid hex values (accent-text, like, dislike are optional).
           required: true
         - label: I authored this skin (or have the right to submit it).
           required: true

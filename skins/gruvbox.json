@@ -1,7 +1,7 @@
 {
   "name": "Gruvbox",
   "author": "Viboplr Community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "dark",
   "colors": {
     "bg-primary": "#282828",
@@ -14,10 +14,13 @@
     "text-tertiary": "#7c7060",
     "accent": "#fabd2f",
     "accent-dim": "#d79921",
+    "accent-text": "#282828",
     "border": "#3c3836",
     "now-playing-bg": "#1a1a1a",
     "success": "#b8bb26",
     "error": "#fb4934",
-    "warning": "#fe8019"
+    "warning": "#fe8019",
+    "like": "#fb4934",
+    "dislike": "#fe8019"
   }
 }

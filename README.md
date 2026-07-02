@@ -23,10 +23,10 @@ You don't edit `index.json` by hand. Instead:
 
 1. **Get your skin JSON.** Export from the app (Settings → Skins → Export) or
    hand-write one in the format below. It needs `name`, `author`, `type`, and a
-   `colors` object with **all 15 keys**.
+   `colors` object with **all 18 keys** (3 are optional — see Color Tokens).
 2. **Open a [Submit a skin](../../issues/new?template=submit-skin.yml) issue**
    and paste the JSON (or link to a raw `.json` URL).
-3. A bot **validates** it — all 15 hex colors, `type`, and `customCSS` hygiene —
+3. A bot **validates** it — the hex colors, `type`, and `customCSS` hygiene —
    and either comments what's wrong or opens a PR that writes
    `skins/<id>.json` and adds the index entry. Comment `/retry` after fixing.
 4. A maintainer reviews and **merges the PR** — that publishes your skin to the
@@ -51,11 +51,14 @@ You don't edit `index.json` by hand. Instead:
     "text-tertiary": "#70708a",
     "accent": "#53a8ff",
     "accent-dim": "#3a7bd5",
+    "accent-text": "#ffffff",
     "border": "#2a2a4a",
     "now-playing-bg": "#0d1b2a",
     "success": "#4caf50",
     "error": "#f44336",
-    "warning": "#ff9500"
+    "warning": "#ff9500",
+    "like": "#ff4d6a",
+    "dislike": "#ff9500"
   },
   "customCSS": ""
 }
@@ -69,7 +72,7 @@ You don't edit `index.json` by hand. Instead:
 | `author` | Yes | Your name or username |
 | `version` | No | Version string (defaults to `1.0.0`). Use numeric (`1.2.0`) so auto-update works. |
 | `type` | Yes | `"dark"` or `"light"` — controls overlay contrast behavior |
-| `colors` | Yes | All 15 color tokens (see below) |
+| `colors` | Yes | The 18 color tokens (see below; 3 are optional) |
 | `customCSS` | No | Optional raw CSS overrides (max 10KB; no `@import`, `url(...)`, `javascript:`, or `expression(...)`) |
 
 ### Color Tokens
@@ -86,13 +89,19 @@ You don't edit `index.json` by hand. Instead:
 | `text-tertiary` | Faint/tertiary text |
 | `accent` | Primary accent (buttons, links, highlights) |
 | `accent-dim` | Dimmed accent variant |
+| `accent-text` | Text rendered on accent backgrounds (e.g. primary buttons) — optional |
 | `border` | Borders and dividers |
 | `now-playing-bg` | Now-playing bar background |
 | `success` | Success indicators |
 | `error` | Error/destructive indicators |
 | `warning` | Warning indicators |
+| `like` | Like (heart) buttons/indicators — optional |
+| `dislike` | Dislike buttons/indicators — optional |
 
-All color values must be hex format (`#rgb` or `#rrggbb`).
+All color values must be hex format (`#rgb` or `#rrggbb`). The three tokens
+marked *optional* postdate the original schema: skins that omit them still
+validate and install, and the app falls back to its default skin's values.
+New skins should define all 18.
 
 ### Index Entry Format (generated for you)
 

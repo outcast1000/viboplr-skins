@@ -1,7 +1,7 @@
 // No-deps tests for the skin validator. Run: node scripts/skin.test.mjs
 import assert from "node:assert/strict";
 import { validateSkinText } from "./validate-skin.mjs";
-import { SKIN_COLOR_KEYS, slugify, isHexColor, parseSkinJson } from "./lib.mjs";
+import { SKIN_COLOR_KEYS, OPTIONAL_SKIN_COLOR_KEYS, slugify, isHexColor, parseSkinJson } from "./lib.mjs";
 
 let pass = 0;
 function t(name, fn) {
@@ -27,12 +27,31 @@ t("valid skin passes and derives entry+file", () => {
   assert.equal(r.skin.colors["accent"], "#123456");
 });
 
-t("missing a color key fails", () => {
+t("missing a required color key fails", () => {
   const bad = JSON.parse(JSON.stringify(goodSkin));
   delete bad.colors["accent"];
   const r = validateSkinText(JSON.stringify(bad));
   assert.ok(!r.ok);
   assert.ok(r.errors.some((e) => e.includes("accent")));
+});
+
+t("missing optional keys pass with a warning and are omitted from the file", () => {
+  const skin = JSON.parse(JSON.stringify(goodSkin));
+  for (const key of OPTIONAL_SKIN_COLOR_KEYS) delete skin.colors[key];
+  const r = validateSkinText(JSON.stringify(skin));
+  assert.ok(r.ok, r.errors.join("; "));
+  for (const key of OPTIONAL_SKIN_COLOR_KEYS) {
+    assert.ok(r.warnings.some((w) => w.includes(`"${key}"`)), `expected warning for ${key}`);
+    assert.ok(!(key in r.skin.colors), `expected ${key} omitted from file`);
+  }
+});
+
+t("invalid hex on an optional key fails", () => {
+  const bad = JSON.parse(JSON.stringify(goodSkin));
+  bad.colors["like"] = "crimson";
+  const r = validateSkinText(JSON.stringify(bad));
+  assert.ok(!r.ok);
+  assert.ok(r.errors.some((e) => e.includes("like")));
 });
 
 t("non-hex color fails", () => {
